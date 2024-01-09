@@ -11,7 +11,7 @@ const app = express();
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
 app.get('/api', (req, res) => {
-  res.send({ message: 'if you can see this, i am coming from express-api/src/main.ts' });
+  res.send({ message: 'If your seeing this, I am coming from api/src/main.ts' });
 });
 
 const port = process.env.PORT || 3333;

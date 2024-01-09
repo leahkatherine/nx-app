@@ -14,7 +14,19 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@react-monorepo/libs": ["libs/src/index.ts"],
+      "@react-monorepo/libs/server": ["libs/src/server.ts"],
+      "@react-monorepo/my-new-lib": ["my-new-lib/src/index.ts"],
+      "@react-monorepo/my-new-lib/server": ["my-new-lib/src/server.ts"],
+      "@react-monorepo/orders": ["libs/orders/src/index.ts"],
+      "@react-monorepo/products": ["libs/products/src/index.ts"],
+      "@react-monorepo/shared": ["libs/src/index.ts"],
+      "@react-monorepo/shared-ui": ["libs/shared/ui/src/index.ts"],
+      "@react-monorepo/shared/server": ["libs/src/server.ts"],
+      "@react-monorepo/types": ["libs/shared/src/index.ts"],
+      "@react-monorepo/types/server": ["libs/shared/src/server.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
