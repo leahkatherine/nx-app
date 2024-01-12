@@ -33,8 +33,9 @@
       ],
       "@react-monorepo/libs": ["libs/src/index.ts"],
       "@react-monorepo/libs/server": ["libs/src/server.ts"],
-      "@react-monorepo/my-new-lib": ["my-new-lib/src/index.ts"],
-      "@react-monorepo/my-new-lib/server": ["my-new-lib/src/server.ts"],
+      "@react-monorepo/libs/web/design-system": [
+        "libs/web/design-system/src/index.ts"
+      ],
       "@react-monorepo/orders": ["libs/orders/src/index.ts"],
       "@react-monorepo/products": ["libs/products/src/index.ts"],
       "@react-monorepo/shared": ["libs/src/index.ts"],

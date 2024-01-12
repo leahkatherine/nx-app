@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
-import { validateEmail } from '@react-monorepo/web/design-system'; // [validateEmail needs attention to connect 
+import { validateEmail } from '@react-monorepo/design-system';
 
 export const useLogin = () => {
   const router = useRouter();

@@ -1,14 +1,4 @@
-import styles from './feat-dashboard.module.css';
-
-/* eslint-disable-next-line */
-export interface FeatDashboardProps {}
-
-export function FeatDashboard(props: FeatDashboardProps) {
-  return (
-    <div className={styles['container']}>
-      <h1>Welcome to FeatDashboard!</h1>
-    </div>
-  );
-}
-
-export default FeatDashboard;
+import * as React from 'react';
+import type { AppProps} from 'next/app';
+import { CacheProvider, EmotionCache } from '@emotion/react';
+import { ThemeProvider, CssBaseline, createTheme } from '@mui/material';
