@@ -38,6 +38,15 @@
     "@nx/vite:test": {
       "cache": true,
       "inputs": ["default", "^production"]
+    },
+    "build-storybook": {
+      "cache": true,
+      "inputs": [
+        "default",
+        "^production",
+        "{projectRoot}/.storybook/**/*",
+        "{projectRoot}/tsconfig.storybook.json"
+      ]
     }
   },
   "namedInputs": {
@@ -53,7 +62,10 @@
       "!{projectRoot}/tsconfig.spec.json",
       "!{projectRoot}/jest.config.[jt]s",
       "!{projectRoot}/src/test-setup.[jt]s",
-      "!{projectRoot}/test-setup.[jt]s"
+      "!{projectRoot}/test-setup.[jt]s",
+      "!{projectRoot}/**/*.stories.@(js|jsx|ts|tsx|mdx)",
+      "!{projectRoot}/.storybook/**/*",
+      "!{projectRoot}/tsconfig.storybook.json"
     ],
     "sharedGlobals": []
   },
@@ -81,5 +93,12 @@
       }
     }
   },
-  "nxCloudAccessToken": "ZGQxOTdiMGYtNzE1Mi00ZWVkLTk2N2YtNGQ3OTBlZjQ0YjU3fHJlYWQtd3JpdGU="
+  "nxCloudAccessToken": "ZGQxOTdiMGYtNzE1Mi00ZWVkLTk2N2YtNGQ3OTBlZjQ0YjU3fHJlYWQtd3JpdGU=",
+  "tasksRunnerOptions": {
+    "default": {
+      "options": {
+        "cacheableOperations": ["build-storybook"]
+      }
+    }
+  }
 }
