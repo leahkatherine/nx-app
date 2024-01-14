@@ -1,89 +1,34 @@
-import { useState } from 'react';
-import { useRouter } from 'next/router';
-import { validateEmail } from '@react-monorepo/design-system';
+import { useAuthContext } from '@react-monorepo/design-system';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { useToast } from '@react-monorepo/design-system';
+import { EmailLogin } from '@react-monorepo/libs/shared/types';
 
 export const useLogin = () => {
-  const router = useRouter();
-  const [email, setEmail] = useState<string>('');
-  const [auth, setAuth] = useState<boolean>(false);
-  const [loading, setLoading] = useState<boolean>(false);
-  const [code, setCode] = useState('');
+  const { login } = useAuthContext();
+  const { state } = useLocation();
+  const navigate = useNavigate();
+  const { showToast } = useToast();
 
-  const handleLogin = async (email: string) => {
-    setLoading(true);
-
-    if (!email) {
-      alert('Email is required');
-      setLoading(false);
-      return;
-    }
-
-    if (!validateEmail(email)) {
-      alert('Email is invalid');
-      setLoading(false);
-      return;
-    }
-
-    await fetch('/api/auth-email', {
-      method: 'POST',
-      body: JSON.stringify({ email }),
-    })
-      .then((res) => {
-        if (res.status === 200) {
-          setAuth(true);
-        } else {
-          if (res.status === 403) {
-            alert('Request for dev mode denied, use testing address');
-          } else {
-            alert('Email not sent: ' + res.status + ' ' + res.statusText);
-          }
-        }
+  const onSubmitEmail = (credentials: EmailLogin) => {
+    const { email, password } = credentials;
+    login(email, password)
+      .then(() => {
+        navigate(state?.path || '/');
+        showToast({
+          type: 'success',
+          message: 'Login successful',
+        });
       })
       .catch((error) => {
-        console.error('Error:', error);
+        console.log(error);
+        showToast({
+          type: 'error',
+          message: error?.response?.data?.message || 'Login failed',
+        });
       });
-    setLoading(false);
-  };
-
-  const handleSetEmail = (email: string) => {
-    setEmail(email);
-  };
-
-  const handleSetCode = (code: string) => {
-    setCode(code);
-  };
-
-  const validateToken = async (code: string, email: string) => {
-    setLoading(true);
-    await fetch('/api/auth-token', {
-      method: 'POST',
-      body: JSON.stringify({ token: code, email }),
-    })
-      .then(async (res) => {
-        const body = await res.json();
-        if (res.status === 200) {
-          localStorage.setItem('token', body.token);
-          localStorage.setItem('localEmail', email);
-
-          router.push('/');
-        } else {
-          alert('Invalid code');
-        }
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-      });
-    setLoading(false);
   };
 
   return {
-    email,
-    handleSetEmail,
-    auth,
-    loading,
-    handleLogin,
-    code,
-    handleSetCode,
-    validateToken,
+    onSubmitEmail,
   };
 };

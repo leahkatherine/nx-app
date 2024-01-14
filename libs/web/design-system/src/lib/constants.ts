@@ -70,6 +70,14 @@ export const animationProps = {
 };
 
 
+
+export const baseURL =
+  'http://localhost:4200';
+
+  
+  export const defaultTimeout = 1000;
+
 export interface FuncProviderProps {
   children: React.ReactNode;
 }
+
