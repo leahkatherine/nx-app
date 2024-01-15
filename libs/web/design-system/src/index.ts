@@ -71,6 +71,12 @@ export {
 
 //hooks 
 
+//layouts 
+export * from './lib/layouts/ContentCenteredLayout';
+export * from './lib/layouts/ContentNavLayout';
+export * from './lib/layouts/LayoutContainer';
+
+
 
 //styles
 export * from './lib/styles';
