@@ -11,8 +11,8 @@ import { authButtonStyleProps } from '../constants/style';
 import { useToast } from '@react-monorepo/design-system';
 import {
   validateEmail,
-  validatePassword,
-} from '@vegangouda/shared/utils-validation';
+  validatePassword, 
+} from '@react-monorepo/design-system';
 
 interface EmailLoginProps {
   onSubmit: (credentials: EmailCredentials) => void;

@@ -19,10 +19,12 @@
       "@react-monorepo/data-access/server": [
         "libs/shared/data-access/src/server.ts"
       ],
-      "@react-monorepo/libs/shared/types": [
-        "libs/shared/types/src/index.ts"
-      ],
+      "@react-monorepo/libs/shared/types": ["libs/shared/types/src/index.ts"],
       "@react-monorepo/design-system": ["libs/web/design-system/src/index.ts"],
+      "@react-monorepo/design-system/core": [
+        "libs/web/design-system/src/core/index.ts"
+      ],
+
       "@react-monorepo/design-system/server": [
         "libs/web/design-system/src/server.ts"
       ],
