@@ -57,7 +57,6 @@ export * from './lib/core/ToggleButton/ToggleButtonGroup';
 export * from './lib/core/Toolbar/Toolbar';
 export * from './lib/core/Tooltip/Tooltip';
 export * from './lib/core/Typography/Typography';
-export * from './lib/themes';
 export * from './lib/utils';
 export * from './lib/constants';
 export {
@@ -71,6 +70,7 @@ export {
 
 //hooks 
 
+
 //layouts 
 export * from './lib/layouts/ContentCenteredLayout';
 export * from './lib/layouts/ContentNavLayout';
@@ -79,11 +79,12 @@ export * from './lib/layouts/LayoutContainer';
 
 
 //styles
-export * from './lib/styles';
+
+export * from './lib/styles/theme';
 
 
-//thems
-export * from './lib/themes';
+//themes -  Return with brand functionality 
+
 
 //utils
 export * from './lib/utils';

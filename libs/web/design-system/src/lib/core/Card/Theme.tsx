@@ -1,5 +1,6 @@
 import { Components, Theme } from '@mui/material'
 
+
 export const createCardTheme = (theme: Theme): Components['MuiCard'] => {
   return {
     defaultProps: {
@@ -18,7 +19,7 @@ export const createCardActionAreaTheme = (theme: Theme): Components['MuiCardActi
     styleOverrides: {
       root: {
         '&:hover': {
-          backgroundColor: theme.palette.state.surface.hovered,
+          backgroundColor: theme.palette.action.hover,
           '.MuiCardActionArea-focusHighlight': {
             opacity: 0,
           },

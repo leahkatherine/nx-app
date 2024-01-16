@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import {
   ThemeProvider as MuiThemeProvider,
   CssBaseline,
-  Theme as ThemeDefinition,
   useMediaQuery,
   GlobalStyles,
 } from '@mui/material';
