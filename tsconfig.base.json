@@ -19,12 +19,10 @@
       "@react-monorepo/data-access/server": [
         "libs/shared/data-access/src/server.ts"
       ],
-      "@react-monorepo/libs/shared/types": ["libs/shared/types/src/index.ts"],
       "@react-monorepo/design-system": ["libs/web/design-system/src/index.ts"],
       "@react-monorepo/design-system/core": [
         "libs/web/design-system/src/core/index.ts"
       ],
-
       "@react-monorepo/design-system/server": [
         "libs/web/design-system/src/server.ts"
       ],
@@ -36,8 +34,11 @@
       "@react-monorepo/feat-dashboard/server": [
         "libs/web/feat-dashboard/src/server.ts"
       ],
+      "@react-monorepo/feat-nav": ["libs/web/feat-nav/src/index.ts"],
+      "@react-monorepo/feat-nav/server": ["libs/web/feat-nav/src/server.ts"],
       "@react-monorepo/libs": ["libs/src/index.ts"],
       "@react-monorepo/libs/server": ["libs/src/server.ts"],
+      "@react-monorepo/libs/shared/types": ["libs/shared/types/src/index.ts"],
       "@react-monorepo/libs/web/design-system": [
         "libs/web/design-system/src/index.ts"
       ],
