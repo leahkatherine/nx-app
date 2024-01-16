@@ -11,7 +11,7 @@ import {
   Radio,
   RadioGroup,
   Checkbox,
-} from '../../../../../../../../react-monorepo/libs/web/design-system/src';
+} from '@mui/material';
 import { joiResolver } from '@hookform/resolvers/joi';
 import { useForm, SubmitHandler, Controller } from 'react-hook-form';
 import Joi from 'joi';
@@ -47,10 +47,10 @@ type FormData = {
 };
 
 interface FormProps {
-  schema: Joi.ObjectSchema<FormData>;
+  schema: Joi.ObjectSchema<any>;
   defaultValues: object;
   questions: InputLine[];
-  onSubmit: SubmitHandler<FormData>; 
+  onSubmit: (data: any) => void; 
 }
 
 

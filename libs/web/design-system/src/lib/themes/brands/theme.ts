@@ -1,4 +1,4 @@
-import { ThemeOptions } from '@mui/material/styles';
+/* import { ThemeOptions } from '@mui/material/styles';
 
 
 const colorPalette = {
@@ -52,3 +52,4 @@ export const lightThemeOptions: ThemeOptions = {
 
 
 export default lightThemeOptions;
+*/ 

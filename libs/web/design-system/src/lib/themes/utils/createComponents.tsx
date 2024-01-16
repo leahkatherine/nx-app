@@ -1,9 +1,4 @@
-import {
-  createAccordionTheme,
-  createAccordionActionsTheme,
-  createAccordionDetailsTheme,
-  createAccordionSummaryTheme,
-} from '../../core/Accordion/Theme'
+/* 
 import { createAlertTheme } from '../../core/Alert/Theme'
 import { createAutocompleteTheme } from '../../core/Autocomplete/Theme'
 import { createAvatarTheme } from '../../core/Avatar/Theme'
@@ -43,10 +38,6 @@ import { Theme } from '@mui/material'
 
 export const createComponents = (theme: Theme): Theme['components'] => {
   return {
-    MuiAccordion: createAccordionTheme(theme),
-    MuiAccordionActions: createAccordionActionsTheme(theme),
-    MuiAccordionDetails: createAccordionDetailsTheme(theme),
-    MuiAccordionSummary: createAccordionSummaryTheme(theme),
     MuiAlert: createAlertTheme(theme),
     MuiAutocomplete: createAutocompleteTheme(theme),
     MuiAvatar: createAvatarTheme(theme),
@@ -84,3 +75,4 @@ export const createComponents = (theme: Theme): Theme['components'] => {
     MuiTooltip: createTooltipTheme(theme),
   }
 }
+/** */

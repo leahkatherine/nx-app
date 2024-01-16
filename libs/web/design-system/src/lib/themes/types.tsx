@@ -1,4 +1,4 @@
-import { TypographyOptions } from '@mui/material/styles/createTypography';
+/* import { TypographyOptions } from '@mui/material/styles/createTypography';
 import { Shadows } from '@mui/material/styles/shadows';
 
 export type State = {
@@ -124,7 +124,7 @@ export interface PaletteTheme {
   };
 }
 
-export interface BrandTheme {
+export interface ThemeOptions {
   palette: PaletteTheme;
   typography: TypographyOptions;
   shadows: Shadows;
@@ -223,3 +223,6 @@ export const OnUnderlying: IUnderlying = {
 export type SxPosition = {
   marginTop?: number;
 };
+
+
+/** Comemnting out for now return with brands */

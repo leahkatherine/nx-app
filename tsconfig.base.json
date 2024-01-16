@@ -52,7 +52,7 @@
       ],
       "@react-monorepo/shared-ui": ["libs/shared/ui/src/index.ts"],
       "@react-monorepo/shared/server": ["libs/src/server.ts"],
-      "@react-monorepo/types": ["libs/shared/types/src/index.ts"],
+      "@react-monorepo/shared/types": ["libs/shared/types/src/index.ts"],
       "@react-monorepo/types/server": ["libs/shared/types/src/server.ts"]
     }
   },
