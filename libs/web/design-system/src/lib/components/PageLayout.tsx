@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { Box } from '..core';
+import { Box } from '../core';
 
 export const PageLayout = ({ children }: { children: ReactNode }) => {
   return React.createElement(
