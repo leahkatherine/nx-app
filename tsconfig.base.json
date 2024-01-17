@@ -26,6 +26,9 @@
       "@react-monorepo/design-system/server": [
         "libs/web/design-system/src/server.ts"
       ],
+      "@react-monorepo/design-system/validators": [
+        "libs/web/design-system/src/validators/index.ts"
+      ],
       "@react-monorepo/feat-auth": ["libs/web/feat-auth/src/index.ts"],
       "@react-monorepo/feat-auth/server": ["libs/web/feat-auth/src/server.ts"],
       "@react-monorepo/feat-dashboard": [
