@@ -1,21 +1,23 @@
-/**
- * This is not a production server yet!
- * This is only a minimal backend to get started.
- */
+import Fastify from 'fastify';
+import { app } from './app/app';
 
-import express from 'express';
-import * as path from 'path';
+const host = process.env.HOST ?? 'localhost';
+const port = process.env.PORT ? Number(process.env.PORT) : 3000;
 
-const app = express();
-
-app.use('/assets', express.static(path.join(__dirname, 'assets')));
-
-app.get('/api', (req, res) => {
-  res.send({ message: 'If your seeing this, I am coming from api/src/main.ts' });
+// Instantiate Fastify with some config
+const server = Fastify({
+  logger: true,
 });
 
-const port = process.env.PORT || 3333;
-const server = app.listen(port, () => {
-  console.log(`Listening at http://localhost:${port}/api`);
+// Register your application as a normal plugin.
+server.register(app);
+
+// Start listening.
+server.listen({ port, host }, (err) => {
+  if (err) {
+    server.log.error(err);
+    process.exit(1);
+  } else {
+    console.log(`[ ready ] http://${host}:${port}`);
+  }
 });
-server.on('error', console.error);
