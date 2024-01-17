@@ -20,15 +20,17 @@
         "libs/shared/data-access/src/server.ts"
       ],
       "@react-monorepo/design-system": ["libs/web/design-system/src/index.ts"],
+
+      "@react-monorepo/design-system/components": [
+        "libs/web/design-system/src/components/index.ts"
+      ],
+      "@react-monorepo/design-system/validators": [
+        "libs/web/design-system/src/lib/validators/index.ts"
+      ],
       "@react-monorepo/design-system/core": [
         "libs/web/design-system/src/core/index.ts"
       ],
-      "@react-monorepo/design-system/server": [
-        "libs/web/design-system/src/server.ts"
-      ],
-      "@react-monorepo/design-system/validators": [
-        "libs/web/design-system/src/validators/index.ts"
-      ],
+
       "@react-monorepo/feat-auth": ["libs/web/feat-auth/src/index.ts"],
       "@react-monorepo/feat-auth/server": ["libs/web/feat-auth/src/server.ts"],
       "@react-monorepo/feat-dashboard": [
@@ -40,11 +42,9 @@
       "@react-monorepo/feat-nav": ["libs/web/feat-nav/src/index.ts"],
       "@react-monorepo/feat-nav/server": ["libs/web/feat-nav/src/server.ts"],
       "@react-monorepo/libs": ["libs/src/index.ts"],
-      "@react-monorepo/libs/server": ["libs/src/server.ts"],
+
       "@react-monorepo/libs/shared/types": ["libs/shared/types/src/index.ts"],
-      "@react-monorepo/libs/web/design-system": [
-        "libs/web/design-system/src/index.ts"
-      ],
+
       "@react-monorepo/orders": ["libs/orders/src/index.ts"],
       "@react-monorepo/products": ["libs/products/src/index.ts"],
       "@react-monorepo/shared": ["libs/src/index.ts"],
