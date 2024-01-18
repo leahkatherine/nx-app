@@ -16,9 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@react-monorepo/data-access": ["libs/shared/data-access/src/index.ts"],
-      "@react-monorepo/data-access/server": [
-        "libs/shared/data-access/src/server.ts"
-      ],
+
       "@react-monorepo/design-system": ["libs/web/design-system/src/index.ts"],
 
       "@react-monorepo/design-system/components": [
@@ -32,15 +30,16 @@
       ],
 
       "@react-monorepo/feat-auth": ["libs/web/feat-auth/src/index.ts"],
-      "@react-monorepo/feat-auth/server": ["libs/web/feat-auth/src/server.ts"],
+      "@react-monorepo/feat-auth/server": [
+        "libs/web/feat-auth/src/server.ts"
+      ],
+
       "@react-monorepo/feat-dashboard": [
         "libs/web/feat-dashboard/src/index.ts"
       ],
-      "@react-monorepo/feat-dashboard/server": [
-        "libs/web/feat-dashboard/src/server.ts"
-      ],
+
       "@react-monorepo/feat-nav": ["libs/web/feat-nav/src/index.ts"],
-      "@react-monorepo/feat-nav/server": ["libs/web/feat-nav/src/server.ts"],
+
       "@react-monorepo/libs": ["libs/src/index.ts"],
 
       "@react-monorepo/libs/shared/types": ["libs/shared/types/src/index.ts"],
@@ -51,13 +50,9 @@
       "@react-monorepo/shared-components": [
         "libs/web/shared-components/src/index.ts"
       ],
-      "@react-monorepo/shared-components/server": [
-        "libs/web/shared-components/src/server.ts"
-      ],
       "@react-monorepo/shared-ui": ["libs/shared/ui/src/index.ts"],
-      "@react-monorepo/shared/server": ["libs/src/server.ts"],
       "@react-monorepo/shared/types": ["libs/shared/types/src/index.ts"],
-      "@react-monorepo/types/server": ["libs/shared/types/src/server.ts"]
+
     }
   },
   "exclude": ["node_modules", "tmp"]
