@@ -1,7 +1,7 @@
 import { Toast, RequireAuth } from '@react-monorepo/design-system';
 import { Route, Routes } from 'react-router-dom';
 import { AuthRoutes } from '@react-monorepo/feat-auth';
-// import { WebDesignSystem } from '@vegangouda/web/design-system';
+// import { WebDesignSystem } from '@react-monorepo/design-system';
 
 export function App() {
   return (
