@@ -1,12 +1,33 @@
-version: '3.4'
+version: '3.8'
 
 services:
-  reactmonoreposource:
-    image: reactmonoreposource
-    build:
-      context: .
-      dockerfile: ./Dockerfile
+  postgres:
+    image: postgres:latest
+    container_name: reactmonorepo
     environment:
-      NODE_ENV: production
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: reactmonorepo-db
     ports:
-      - 4200:4200
+      - "5432:5432"
+    networks:
+      - pg-network
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pg-admin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: leahkanestos@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: password
+    ports:
+      - "5050:80"
+    networks:
+      - pg-network
+
+networks:
+  pg-network:
+
+volumes:
+  pg-data:

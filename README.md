@@ -61,4 +61,18 @@ Nx comes with local caching already built-in (check your `nx.json`). On CI you m
 - [Join the community](https://nx.dev/community)
 - [Subscribe to the Nx Youtube Channel](https://www.youtube.com/@nxdevtools)
 - [Follow us on Twitter](https://twitter.com/nxdevtools)
+
+
+
+# Docker 
+After Creating docker-compose.yml, 
+
+Launch the Containers: Open a terminal window and navigate to the directory containing the docker-compose.yml file. Run the following command to start the containers:
+
+docker-compose up -d
+This command will launch the containers in detached mode, allowing you to continue using the terminal for other tasks. To stop the containers, you can use:
+
+docker-compose down
+
 # nx-app
+
