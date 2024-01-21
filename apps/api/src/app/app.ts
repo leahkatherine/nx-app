@@ -1,7 +1,7 @@
 import * as path from 'path';
 import { FastifyInstance} from 'fastify';
 import AutoLoad from '@fastify/autoload';
-import cors from '@fastify/cors'; // 👈 import the plugin cors - install cors
+import cors from '@fastify/cors'; 
 
 /* eslint-disable-next-line */
 export interface AppOptions {}
