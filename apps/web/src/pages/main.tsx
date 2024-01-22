@@ -1,4 +1,4 @@
-import { StrictMode } from 'react';
+import {  StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import {
@@ -7,7 +7,7 @@ import {
   ToastProvider,
 } from '@react-monorepo/design-system';
 import { LayoutWrapper } from '@react-monorepo/feat-nav';
-import App from './app/app';
+import App from '../app/app';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

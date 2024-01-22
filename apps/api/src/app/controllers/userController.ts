@@ -10,6 +10,7 @@ import {
   EmailLogin,
 } from '@react-monorepo/shared/types';
 
+
 export async function me(request: FastifyRequest, reply: FastifyReply) {
   try {
     const input = request.body as MeInput;

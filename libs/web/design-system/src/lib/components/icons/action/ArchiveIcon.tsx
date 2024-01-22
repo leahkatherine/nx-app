@@ -1,3 +1,11 @@
+
+
+ export const ArchiveIcon = () => {
+  return null }
+
+/*
+
+
 import { createSvgIcon } from '@mui/material/utils'
 
 export const ArchiveIcon = createSvgIcon(
@@ -8,3 +16,6 @@ export const ArchiveIcon = createSvgIcon(
   />,
   'Archive',
 )
+
+  */
+

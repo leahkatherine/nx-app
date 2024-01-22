@@ -1,7 +1,7 @@
 import React, { createContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import { FuncProviderProps, baseURL, defaultTimeout } from '../../../constants';
-import { PageLoader } from '@vegangouda/web/shared-components';
+import { PageLoader } from '@react-monorepo/shared-components';
 interface AuthContextProps {
   login: (email: string, password: string) => Promise<void>;
   logout: () => Promise<void>;
