@@ -9,7 +9,7 @@ services:
       POSTGRES_PASSWORD: password
       POSTGRES_DB: reactmonorepo-db
     ports:
-      - "5432:5432"
+      - '5432:5432'
     restart: always
     networks:
       - pg-network
@@ -23,7 +23,7 @@ services:
       PGADMIN_DEFAULT_EMAIL: leahkanestos@gmail.com
       PGADMIN_DEFAULT_PASSWORD: password
     ports:
-      - "5050:80"
+      - '5050:80'
     networks:
       - pg-network
 
